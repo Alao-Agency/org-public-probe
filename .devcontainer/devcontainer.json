@@ -1,0 +1,6 @@
+{
+  "name": "port-auth-probe",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "postStartCommand": "bash -c 'nohup python3 -m http.server 8000 --directory /workspaces/org-public-probe >/tmp/http.log 2>&1 &'",
+  "forwardPorts": [8000]
+}
